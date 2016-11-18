@@ -62,8 +62,15 @@
 	//watchPosition
 
 	var onWatchSuccess = function(position) {
-		var element = document.getElementById('divWatchMeMove');
-		element.innerHTML = 'Latitude: ' + position.coords.latitude + '<br />' + 'Longitude: ' + position.coords.longitude + '<br />' + '<hr />' + element.innerHTML;
+		//var element = document.getElementById('divWatchMeMove');
+		var lat = pos.coords.latitude,
+                long = pos.coords.longitude,
+                coords = lat + ', ' + long;
+
+        document.getElementById('google-map').setAttribute('src', 'http://maps.google.co.uk?q=' + coords + '&z=60&output=embed');
+
+  
+		//element.innerHTML = 'Latitude: ' + position.coords.latitude + '<br />' + 'Longitude: ' + position.coords.longitude + '<br />' + '<hr />' + element.innerHTML;
 	};
 
 	function onWatchError(error) {
