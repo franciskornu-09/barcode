@@ -123,5 +123,5 @@
   <plugin name="cordova-plugin-compat" />
   <plugin name="cordova-plugin-file"  />
   <plugin name="cordova-plugin-geolocation" />
-  <plugin name="phonegap-plugin-barcode" />
+  <plugin name="phonegap-plugin-barcodescanner" />
 </widget>
