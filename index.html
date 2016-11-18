@@ -37,11 +37,23 @@
 			</div><!-- /header -->
 			<img src="img/download.png" />
 			<div data-role="content" style="text-shadow: none">
-				<button id="getloc">geolocation</button>
-				<div id="google-map"> </div>
-				<button id="decode">
-					Barcode	
-				</button> 
+				<a href="#declareRegions" data-transition="flip">
+				<button>
+					Declare
+				</button> </a>
+				<br />
+				<a href="#results" data-transition="slide">
+				<button>
+					Results
+				</button> </a>
+				<br />
+				<button id="geolocationdata">geolocation</button>
+				<div id="google-map">My Current Position</div>
+				<button onclick="barcode()">Barcode</button>
+				<br />
+				<button id="capturePhoto">camera</button>	<br />
+                  <div><center><img class="lazy" style="display:none;width:100%;height:100%;" id="smallImage" src="" /></center></div>
+				  	<br />
 			</div><!-- /content -->
 		</div><!-- /page -->
 
@@ -50,7 +62,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 			<script type="text/javascript" src="cordova.js"></script>
 			<script type="text/javascript" src="scripts/platformOverrides.js"></script>
-			<script type="text/javascript" src="javaScript.js"></script>
+			<script type="text/javascript" src="scripts/index.js"></script>
 
 	</body>
 </html>
