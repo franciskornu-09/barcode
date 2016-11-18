@@ -104,6 +104,25 @@
                  //end
              });
          });
+		//
+
+		//Geolocation start
+         var c = function (pos) {
+             var lat = pos.coords.latitude,
+                 long = pos.coords.longitude,
+                 coords = lat + ', ' + long;
+
+             document.getElementById('google-map').setAttribute('src', 'http://maps.google.co.uk?q=' + coords + '&z=60&output=embed');
+
+         }
+
+         //get location function
+         document.getElementById("getloc").onclick = function () {
+             navigator.geolocation.getCurrentPosition(c);
+             return false;
+         }
+
+
         // document.getElementById("camera").onclick = function () {
         //     navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
         //         quality: 50,
